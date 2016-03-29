@@ -1,5 +1,3 @@
-var dieRoll = (Math.floor(Math.random() * 6) + 1;
-
 function Player (roundscore, totalscore) {
   this.roundscore = roundscore;
   this.totalscore = totalscore;
@@ -28,17 +26,23 @@ Player.prototype.end = function() {
   }
 };
 
-var newPlayer = new Player(0, 0)
+var Player1 = new Player(0, 0)
+
+var Player2 = new Player(0, 0)
 
 $(document).ready(function() {
-  $("form#play").submit(function(event){
+  $("#roll1").click(function(event){
     event.preventDefault();
-
-    var roundScore = new
-
-
-
-Two standard dice are rolled. If neither shows a 1, their sum is added to the turn total.
-If a single 1 is rolled, the player scores nothing and the turn ends.
-If two 1s are rolled, the player’s entire score is lost, and the turn ends.
-If a double is rolled, the point total is added to the turn total as with any roll but the player is obligated to roll again (possible sub-variation of the two-dice game)
+    debugger;
+  });
+  $("#roll2").click(function(event){
+    event.preventDefault();
+    debugger;
+  });
+});
+//
+//
+// Two standard dice are rolled. If neither shows a 1, their sum is added to the turn total.
+// If a single 1 is rolled, the player scores nothing and the turn ends.
+// If two 1s are rolled, the player’s entire score is lost, and the turn ends.
+// If a double is rolled, the point total is added to the turn total as with any roll but the player is obligated to roll again (possible sub-variation of the two-dice game)
