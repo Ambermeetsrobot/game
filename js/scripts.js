@@ -26,6 +26,7 @@ Player.prototype.end = function() {
   if (this.totalscore >= 100) {
     return "The End...Ya Dummy."
   }
+};
 
 var newPlayer = new Player(0, 0)
 
