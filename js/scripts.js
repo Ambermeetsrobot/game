@@ -19,13 +19,15 @@ Player.prototype.turn = function() {
 };
 
 Player.prototype.hold = function() {
-  this.totalscore = this.totalscore + this.roundscore; 
+  this.totalscore = this.totalscore + this.roundscore;
 }
 
-Roundscore.prototype.sum = function(dieRoll) {
+Player.prototype.end = function() {
+  if (this.totalscore >= 100) {
+    return "The End...Ya Dummy."
+  }
 
-}
-
+var newPlayer = new Player(0, 0)
 
 $(document).ready(function() {
   $("form#play").submit(function(event){
