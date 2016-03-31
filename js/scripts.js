@@ -18,14 +18,8 @@ Player.prototype.roll = function() {
 
 Player.prototype.hold = function() {
   this.totalscore = this.totalscore + this.roundscore;
+  this.roundscore = 0;
 }
-
-Player.prototype.end = function() {
-  if (this.totalscore >= 100) {
-    return "The End...Ya Dummy."
-  }
-};
-
 
 $(document).ready(function() {
   var player1 = new Player(0, 0);
@@ -35,17 +29,32 @@ $(document).ready(function() {
     $("#player1score").show();
     player1.roll();
     $("#roundscore1").text(player1.roundscore);
-    $("#totalscore1").text(player1.turn);
-
   });
+
+    $("#hold1").click(function(event){
+      event.preventDefault();
+      player1.hold();
+      $("#totalscore1").text(player1.totalscore);
+      if (player2.totalscore >= 100) {
+        alert("The end...ya dummy!")
+        }
+    });
+
   $("#roll2").click(function(event){
     event.preventDefault();
     $("#player2score").show();
     player2.roll();
     $("#roundscore2").text(player2.roundscore);
-    $("#totalscore2").text(player2.totalscore);
-
   });
+
+    $("#hold2").click(function(event){
+      event.preventDefault();
+      player2.hold();
+      $("#totalscore2").text(player2.totalscore);
+      if (player2.totalscore >= 100) {
+        alert("The end...ya dummy!")
+        }
+      });
 });
 //
 //
