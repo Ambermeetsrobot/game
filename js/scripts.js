@@ -4,32 +4,17 @@ function Player (roundscore, totalscore) {
 }
 
 Player.prototype.roll = function() {
-<<<<<<< HEAD
   var roll1 = Math.floor(Math.random() * 6) + 1;
   var roll2 = Math.floor(Math.random() * 6) + 1;
   if (roll1 !== 1 || roll2 !== 1) {
-  return roll1 + roll2;
+  this.roundscore = this.roundscore + roll1 + roll2;
   }
-  else { return 0
-  }
-=======
-  var dieRoll = Math.floor(Math.random() * 6) + 1;
-  return dieRoll;
->>>>>>> 2f6d6810c89bd208358065eae815954db65a14b0
+    else {
+    this.roundscore = 0;
+    return 0;
+    }
 };
 
-Player.prototype.turn = function() {
-  var value = this.roll();
-<<<<<<< HEAD
-  this.roundscore = this.roundscore + value;
-  }
-=======
-  if (value !== 1) {
-  this.roundscore = this.roundscore + value;
-    } else { this.roundscore = 0;
-    }
->>>>>>> 2f6d6810c89bd208358065eae815954db65a14b0
-};
 
 Player.prototype.hold = function() {
   this.totalscore = this.totalscore + this.roundscore;
@@ -41,31 +26,25 @@ Player.prototype.end = function() {
   }
 };
 
-<<<<<<< HEAD
-=======
-var Player1 = new Player(0, 0)
-
-var Player2 = new Player(0, 0)
->>>>>>> 2f6d6810c89bd208358065eae815954db65a14b0
 
 $(document).ready(function() {
+  var player1 = new Player(0, 0);
+  var player2 = new Player(0, 0);
   $("#roll1").click(function(event){
     event.preventDefault();
-<<<<<<< HEAD
-    var Player1 = new Player(0, 0);
-=======
->>>>>>> 2f6d6810c89bd208358065eae815954db65a14b0
-    debugger;
+    $("#player1score").show();
+    player1.roll();
+    $("#roundscore1").text(player1.roundscore);
+    $("#totalscore1").text(player1.turn);
+
   });
   $("#roll2").click(function(event){
     event.preventDefault();
-<<<<<<< HEAD
-    var Player2 = new Player(0, 0);
-    var dieRoll =
-    $(".roundscore").text(Player2.roundscore);
-=======
->>>>>>> 2f6d6810c89bd208358065eae815954db65a14b0
-    debugger;
+    $("#player2score").show();
+    player2.roll();
+    $("#roundscore2").text(player2.roundscore);
+    $("#totalscore2").text(player2.totalscore);
+
   });
 });
 //

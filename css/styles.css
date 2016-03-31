@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 button {
   margin: 2em;
 }
 
-h2 {
-  margin-left: 5em;
-}
 img {
   width: 300px;
 }
@@ -15,12 +11,5 @@ img {
 }
 
 #player2score {
-=======
-img {
-  width: 75%;
-}
-
-score {
->>>>>>> 2f6d6810c89bd208358065eae815954db65a14b0
   display: none;
 }
