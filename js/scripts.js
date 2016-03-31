@@ -4,6 +4,7 @@ function Player (roundscore, totalscore) {
 }
 
 Player.prototype.roll = function() {
+<<<<<<< HEAD
   var roll1 = Math.floor(Math.random() * 6) + 1;
   var roll2 = Math.floor(Math.random() * 6) + 1;
   if (roll1 !== 1 || roll2 !== 1) {
@@ -11,12 +12,23 @@ Player.prototype.roll = function() {
   }
   else { return 0
   }
+=======
+  var dieRoll = Math.floor(Math.random() * 6) + 1;
+  return dieRoll;
+>>>>>>> 2f6d6810c89bd208358065eae815954db65a14b0
 };
 
 Player.prototype.turn = function() {
   var value = this.roll();
+<<<<<<< HEAD
   this.roundscore = this.roundscore + value;
   }
+=======
+  if (value !== 1) {
+  this.roundscore = this.roundscore + value;
+    } else { this.roundscore = 0;
+    }
+>>>>>>> 2f6d6810c89bd208358065eae815954db65a14b0
 };
 
 Player.prototype.hold = function() {
@@ -29,18 +41,30 @@ Player.prototype.end = function() {
   }
 };
 
+<<<<<<< HEAD
+=======
+var Player1 = new Player(0, 0)
+
+var Player2 = new Player(0, 0)
+>>>>>>> 2f6d6810c89bd208358065eae815954db65a14b0
 
 $(document).ready(function() {
   $("#roll1").click(function(event){
     event.preventDefault();
+<<<<<<< HEAD
     var Player1 = new Player(0, 0);
+=======
+>>>>>>> 2f6d6810c89bd208358065eae815954db65a14b0
     debugger;
   });
   $("#roll2").click(function(event){
     event.preventDefault();
+<<<<<<< HEAD
     var Player2 = new Player(0, 0);
     var dieRoll =
     $(".roundscore").text(Player2.roundscore);
+=======
+>>>>>>> 2f6d6810c89bd208358065eae815954db65a14b0
     debugger;
   });
 });
