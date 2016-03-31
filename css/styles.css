@@ -1,0 +1,18 @@
+button {
+  margin: 2em;
+}
+
+h2 {
+  margin-left: 5em;
+}
+img {
+  width: 300px;
+}
+
+#player1score {
+  display: none;
+}
+
+#player2score {
+  display: none;
+}
